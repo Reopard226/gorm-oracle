@@ -1,4 +1,5 @@
 Oracle
+
 1) create a file oracle.env and put this in it:
 DB_SID=ORCLCDB
 DB_PDB=ORCLPDB1
@@ -7,3 +8,8 @@ DB_MEMORY=2GB
 
 2) Start up Oracle in docker:
 sudo docker run -p 1521:1521 --env-file oracle.env -it --name oracleDB droneregistry.repustate.com/oracle:latest 
+
+3) Install the Oracle Instant Client from here: 
+https://www.oracle.com/database/technologies/instant-client/linux-x86-64-downloads.html (version 12.2.0.1.0). 
+
+Make the shared libraries available on LD_LIBRARY_PATH
