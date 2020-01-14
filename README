@@ -1,0 +1,9 @@
+Oracle
+1) create a file oracle.env and put this in it:
+DB_SID=ORCLCDB
+DB_PDB=ORCLPDB1
+DB_DOMAIN=localdomain
+DB_MEMORY=2GB
+
+2) Start up Oracle in docker:
+sudo docker run -p 1521:1521 --env-file oracle.env -it --name oracleDB droneregistry.repustate.com/oracle:latest 
